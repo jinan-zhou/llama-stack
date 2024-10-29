@@ -150,4 +150,15 @@ def available_providers() -> List[ProviderSpec]:
                 config_class="llama_stack.providers.remote.inference.databricks.DatabricksImplConfig",
             ),
         ),
+        remote_provider_spec(
+            api=Api.inference,
+            adapter=AdapterSpec(
+                adapter_type="nutanix",
+                pip_packages=[
+                    "openai",
+                ],
+                module="llama_stack.providers.adapters.inference.nutanix",
+                config_class="llama_stack.providers.adapters.inference.nutanix.NutanixImplConfig",
+            ),
+        ),
     ]
