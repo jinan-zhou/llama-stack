@@ -157,8 +157,8 @@ def available_providers() -> List[ProviderSpec]:
                 pip_packages=[
                     "openai",
                 ],
-                module="llama_stack.providers.adapters.inference.nutanix",
-                config_class="llama_stack.providers.adapters.inference.nutanix.NutanixImplConfig",
+                module="llama_stack.providers.remote.inference.nutanix",
+                config_class="llama_stack.providers.remote.inference.nutanix.NutanixImplConfig",
             ),
         ),
     ]
